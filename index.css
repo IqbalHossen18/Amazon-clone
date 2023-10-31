@@ -207,11 +207,10 @@
     height:100%;
     min-width: 245px;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items: center;
 }
 #navleft .logo{
- 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +290,7 @@
  /* navmiddle from here  */
 
 #navmiddle{
-    width:50%;
+    width:53%;
     background-color: #131921;
     height:100%;
     min-width:450px;
@@ -320,12 +319,26 @@
 
 }
 #selectbox{
-    width:52px;
-    border:none;
+    border-right:1px solid silver;
+    border-left: none;
+    border-bottom:none;
+    border-top:none;
+    min-width: 52px;
+    font-size:10px;
     height:inherit;
     border-top-left-radius:5px;
     border-bottom-left-radius:5px;
     background-color: #E6E6E6;
+    white-space: nowrap; 
+    overflow: hidden;   
+    text-overflow: ellipsis;
+
+}
+#selectbox option{
+    background-color: white;
+    color:black;
+    font-size:15px;
+    font-weight: 500;
 }
 #selectbox:focus{
     outline:none;
@@ -379,9 +392,176 @@
     font-size:22px;
 }
 #navright{
-    width:31%;
+    min-width:345px;
+    width:28%;
+    display:flex;
+    margin:0px 3px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     height:100%;
-    background-color: yellow;
+    background-color:#131921;
 }
 
+#navright .right-1{
+    margin-right:2px;
+    min-width: 78px;
+    width:22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:inherit;
+    padding: 7px 0px;
+}
+#language{
+    text-decoration:none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: inherit;
+    border-radius:2px;
+}
+#language:hover, #language:focus{
+    border:1px solid white;
 
+}
+#language .flag{
+    width: 21px;
+    height:17px;
+    background-image: url('l-icon.ico');
+    background-position:center;
+    background-size: cover;
+}
+#language .text{
+    color:white;
+    font-weight: 700;
+    font-size: 14px;
+    position:relative;
+    right:5px;
+}
+#language .l-icon{
+    position: relative;
+    left:-10px;
+    color:silver;
+    top:2px;
+    font-size:8px;
+}
+#navright .right-2{
+    padding: 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:2px;
+    min-width:132px;
+    width:40%;
+    height: inherit;
+}
+
+#account{
+    text-decoration:none;
+    width:100%;
+    height: inherit;
+    text-align: center;
+    border-radius:2px;
+}
+#account:hover, #account:focus{
+    border:1px solid white;
+}
+#account .signin{
+    position:relative;
+    top:3px;
+    color:white;
+    font-size:12px;
+    font-weight: 600;
+}
+#account .AC-info{
+    position:relative;
+    top:-3px;
+    color:white;
+    font-size:14px;
+    font-weight: bold;
+}
+#account .AC-info i{
+    font-size:8px;
+}
+
+#navright .right-3{
+    padding: 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:2px;
+    min-width: 77px;
+    width:22%;
+    height: inherit;
+}
+#service{
+    text-decoration:none;
+    text-align: center;
+    width: 100%;
+    height: inherit;
+    border-radius:2px;
+}
+#service:hover, #service:focus{
+    border:1px solid white;
+}
+#service .return{
+    position: relative;
+    top:3px;
+    font-size: 12px;
+    color:white;
+    font-weight: 600;
+}
+#service .order{
+    position: relative;
+    top:-3px;
+    color:white;
+    font-size:14px;
+    font-weight: bold;
+}
+#navright .right-4{
+    padding: 7px 0px;
+    margin-right:2px;
+    min-width:60px;
+    width: 16%;
+    height:inherit;
+}
+
+#cart{
+    text-decoration:none;
+    text-align: center;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:inherit;
+    border-radius:2px;
+}
+#cart:hover , #cart:focus{
+    border:1px solid white;
+}
+#cart .add-to-cart{
+    display: flex;
+    flex-direction: column;
+}
+#cart .add-to-cart .number{
+    position: relative;
+    top:-2px;
+    z-index: 1;
+    font-size:12px;
+    color:orangered;
+}
+#cart .add-to-cart .C-icon{
+    position: relative;
+    top:-10px;
+    color:white;
+    font-size:20px;
+}
+#cart .cart-text{
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+}
