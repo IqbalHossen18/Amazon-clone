@@ -604,13 +604,143 @@
     font-weight: 700;
     position: relative;
     left:5px;
-    top:1px;
 }
-#navbottom .menu .menu-icon{
+
+
+
+ /* sidebar start form here  */
+ #check{
+    display: none;
+ }
+
+#side-body{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:100%;
+    z-index:1000;
+    opacity:0%;
+    height: 755px; 
+    background-color: black;
+    transition: opacity 0.5s;
+}
+#check:checked ~ #side-body{
+    left:0;
+    opacity: 80%;
+}
+#sidebar{
+    position:fixed;
+    top:0;
+    left:-365px;
+    height:755px;
+    width:365px;
+    min-width: 365px;
+    z-index: 10001;
+    opacity: 100%;
+    background-color: cyan;
+    transition: all 0.4s;
+}
+#check:checked ~ #sidebar{
+    left:0;
+}
+
+#topside{
+    width:inherit;
+    height:50px;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    top:0;
+
+    z-index: 11;
+    left:0;
+    background-color: #232F3E;
+}
+#topside .st-content{
+    position: absolute;
+    top:0;
+    left: 0;
+    text-decoration: none;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+#topside .st-content .side-icon{
+    width: 75px;
+    height:25px;
+    color:rgb(22, 21, 21);
+    display: flex;
+    justify-content: flex-end;
+    margin-right:6px;
+    align-items: center;
+}
+#topside .st-content .side-icon span{
+    width:27px;
+    font-size: 18px;
+    height: 27px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+#topside .st-content .side-text{
+    width:292px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 6px;
+    height: inherit;
+}
+.side-text span{
+    font-size: 19px;
+    color:white;
+    font-weight: bold;
+}
+#bottomside{
+    width:inherit;
+    position:relative;
+    top:50px;
+    padding-bottom: 50px;
+    left:0;
+    overflow: scroll;
+    height:inherit;
+    background-color: #FEBD69;
+}
+
+#menu-close{
+    background-color: rgb(49, 54, 49);
+    color:white;
+    font-weight: bold;
+    padding:5px 10px;
+    position: fixed;
+    top:10px;
+    border-radius: 10px;
+    z-index: 10002;
+    display: none;
+    left:370px;
+    border:2px solid silver;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#check:checked ~  label #menu-close{
+    display:block;
+}
+#menu-open{
+    position:relative;
     font-size: 20px;
+    z-index:10001;
     font-weight: 600;
     color:white;
 }
+#check:checked ~ label #menu-open{
+    z-index: 5;
+}
+
+
+
 #navbottom .list{
     height: 39px;
     width:90%;
