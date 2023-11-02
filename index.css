@@ -619,8 +619,9 @@
     left:-100%;
     width:100%;
     z-index:1000;
+    background-position: fixed;
     opacity:0%;
-    height: 755px; 
+    height: 100%; 
     background-color: black;
     transition: opacity 0.5s;
 }
@@ -632,12 +633,13 @@
     position:fixed;
     top:0;
     left:-365px;
-    height:755px;
+    height:116%;
+    overflow: scroll;
     width:365px;
     min-width: 365px;
     z-index: 10001;
     opacity: 100%;
-    background-color: cyan;
+    background-color: #ffffff;
     transition: all 0.4s;
 }
 #check:checked ~ #sidebar{
@@ -651,7 +653,6 @@
     justify-content: center;
     align-items: center;
     top:0;
-
     z-index: 11;
     left:0;
     background-color: #232F3E;
@@ -704,11 +705,71 @@
     width:inherit;
     position:relative;
     top:50px;
-    padding-bottom: 50px;
     left:0;
-    overflow: scroll;
-    height:inherit;
-    background-color: #FEBD69;
+    padding:7px 0px 30px;
+    height: inherit;
+}
+#bottom-content{
+    width:inherit;
+    padding:0px;
+    margin:0px;
+    margin-top:10px;
+    height: inherit;
+    list-style: none;
+}
+#bottom-content li{
+    width: inherit;
+
+}
+#bottom-content li div{
+    font-size: 18px;
+    color:black;
+    font-weight: bold;
+    padding:13px 20px 13px 36px;
+
+}
+#bottom-content .listtag{
+    height:42px;
+    display: flex;
+    align-items: center;
+}
+
+.listtag a{
+    width:inherit;
+    text-decoration: none;
+    color:rgb(72, 70, 70);
+    font-size: 14px;
+    font-weight: 500;
+    padding:13px 20px 13px 36px;
+} 
+.listtag a:hover{
+    background-color:rgb(239, 239, 239);
+    color:rgb(72, 70, 70);
+
+}
+.listtag i{
+    position: relative;
+    top:2px;
+    font-size: 18px;
+    color:rgb(171, 171, 171);
+    text-align: center;
+    float:right;
+    margin-right: 15px;
+}
+.listtag i:hover{
+    color:black;
+}
+#seeall i{
+    margin-left: 10px;
+    float:none;
+}
+.listtag:hover i,
+.listtag:hover a i {
+    color: black;
+}
+
+.listtag i:hover{
+    color:black;
 }
 
 #menu-close{
