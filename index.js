@@ -26,3 +26,18 @@ adjustSelectWidth();
 
 // Listen for changes in the select box to adjust the width dynamically
 document.getElementById("selectbox").addEventListener("change", adjustSelectWidth);
+
+
+
+function hideItemAbove1247px() {
+    var item = document.querySelector('.sizeitem');
+    if (window.innerWidth > 1247) {
+        item.style.display = 'none';
+    } else {
+        item.style.display = 'block';
+    }
+}
+
+// Call the function when the page loads and on window resize
+window.addEventListener('load', hideItemAbove1247px);
+window.addEventListener('resize', hideItemAbove1247px);

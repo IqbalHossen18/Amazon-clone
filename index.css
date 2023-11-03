@@ -8,7 +8,7 @@
 /* slide section  is here */
 #slider{
     margin:0px 8px;
-    height: 600px;
+    height:100%;
     min-width:1000px;
       
 }
@@ -81,9 +81,20 @@
     background-color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
-/* #item .header{
-    height:15%;
-} */
+
+@media screen and (max-width: 1247px) {
+    #item{
+        width:31.5%;
+        display: flex;
+        flex-direction: column;
+        height:420px;
+        min-width:285px;
+        padding:20px;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+  }
 #item .header h2{
     font-size: 21px;
     font-weight: bold;
@@ -580,6 +591,7 @@
     flex-direction: row;
     align-items:center;
     width:100%;
+    background-size: 200px;
     background-color:#232F3E;
     padding:0px 10px;
 }
@@ -827,3 +839,26 @@
     border:1px solid white;
 
 }
+
+
+ /* item slider start from here...  */
+
+ #item-slider{
+    height: 282px;
+    width:98%;
+    padding:10px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 255, 136);
+ }
+
+ #item-slider .slide-title{
+    height: 32px;
+    background-color: cyan;
+    width: inherit;
+ }
+ #item-slider .slide-item{
+    height: 220px;
+    width: inherit;
+    background-color: coral;
+ }
