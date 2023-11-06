@@ -41,3 +41,78 @@ function hideItemAbove1247px() {
 // Call the function when the page loads and on window resize
 window.addEventListener('load', hideItemAbove1247px);
 window.addEventListener('resize', hideItemAbove1247px);
+
+
+
+
+// item box slider is here
+
+let currentIndex = 0;
+const sliderItems = document.querySelector('.slider-items');
+const slider = document.querySelector('.slider-box');
+const btn1 = document.querySelector('.prev-button')
+const btn2 = document.querySelector('.next-button')
+
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        slideToCurrentIndex();
+    }
+    if(currentIndex < 2){
+        document.querySelector('.next-button').disabled = false;
+    }
+}
+
+function nextSlide() {
+    if (currentIndex < sliderItems.children.length-1) {
+        currentIndex++;
+        slideToCurrentIndex();
+    }
+    if(currentIndex >= 2){
+        document.querySelector('.next-button').disabled = true;
+    }
+    
+}
+
+function slideToCurrentIndex() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Adjust the width of each image as needed
+}
+
+// Initial slide
+slideToCurrentIndex();
+
+
+
+
+sliderItems.addEventListener('mouseover', () => {
+    document.querySelector('.prev-button').style.opacity = '0.5';
+    document.querySelector('.next-button').style.opacity = '0.5'; // Add this line
+  });
+  
+  sliderItems.addEventListener('mouseout', () => {
+    document.querySelector('.prev-button').style.opacity = '0';
+    document.querySelector('.next-button').style.opacity = '0'; // Add this line
+  });
+  btn1.addEventListener('mouseover', ()=>{
+    document.querySelector('.prev-button').style.opacity = '1';
+    document.querySelector('.next-button').style.opacity = '0.5'
+
+
+  })
+  btn1.addEventListener('mouseout', ()=>{
+    document.querySelector('.prev-button').style.opacity = '0.5';
+    document.querySelector('.next-button').style.opacity = '0'
+
+
+  })
+  btn2.addEventListener('mouseover', ()=>{
+    document.querySelector('.next-button').style.opacity = '1';
+    document.querySelector('.prev-button').style.opacity = '0.5'
+
+  })
+  btn2.addEventListener('mouseout', ()=>{
+    document.querySelector('.next-button').style.opacity = '0.5';
+    document.querySelector('.prev-button').style.opacity = '0'
+
+
+  })

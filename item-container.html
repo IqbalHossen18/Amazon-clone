@@ -183,3 +183,72 @@
     <li><a href="#">Sign in</a></li>
 
 </ul>
+
+
+
+
+/* one box slider is here.... */
+.one-box{
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:200px;
+  }
+  .inside-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Set the width to 100% */
+    height: inherit; /* Set the height to 100% */
+  }
+  .slide-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+  .slide-child img {
+    display: flex;
+    padding:0px 20px;
+    width: auto;
+    height: auto;
+    max-width: 270px;
+    max-height: 200px;
+  }
+  .next-button,
+   .prev-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:30px 10px;
+    background-color:rgb(255, 255, 255);
+    opacity:0%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border:1px solid silver;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: none;
+    border-top-left-radius: none;
+    transition: opacity 0.4s;
+  }
+  .prev-button:focus,
+  .next-button:focus{
+    border:2px solid #41828C;
+  }
+  #btn-icon{
+    font-size: 35px;
+    color:black;
+    font-weight: bold;
+  }
+  .prev-button {
+    left:0px;
+    top:110px;
+  
+  }
+  .next-button {
+    right:0px;
+    top:110px;
+  }
+  
